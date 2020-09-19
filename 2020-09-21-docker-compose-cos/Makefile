@@ -61,10 +61,9 @@ CONFIGURE_DOCKER_AUTH:="docker-credential-gcr configure-docker"
 configure-gcr:
 	$(call send-ssh-command,$(CONFIGURE_DOCKER_AUTH))
 
-# REPO:=https://github.com/sidpalas/mern-docker-compose.git
-REPO:=https://github.com/sidpalas/storybooks.git
+REPO:=https://github.com/sidpalas/devops-directive.git
 CLONE_REPO:="docker run -i --rm -v $(HOME_PATH):/root -v $(HOME_PATH):/git alpine/git clone $(REPO)"
-clone-mern-repo:
+clone-repo:
 	$(call send-ssh-command,$(CLONE_REPO))
 
 define ALIAS_COMMAND

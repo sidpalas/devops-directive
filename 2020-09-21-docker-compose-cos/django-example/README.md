@@ -1,18 +1,20 @@
 # Django docker-compose example
 
-### link
+## link
 
 https://docs.docker.com/compose/django/
 
-### create example app
+## create example app
 
 `sudo docker-compose run web django-admin startproject composeexample .`
 
-### update file owner (root -> user)
+## update file owner (root -> user)
 
 `sudo chown -R $USER:$USER .`
 
-### modify settings.py
+## modify settings.py
+
+### database config
 
 ```
 DATABASES = {
@@ -26,3 +28,7 @@ DATABASES = {
     }
 }
 ```
+
+### allowed hosts
+
+ALLOWED_HOSTS = ['<INSERT_HOST_NAME>']
