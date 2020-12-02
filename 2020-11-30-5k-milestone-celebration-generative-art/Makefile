@@ -2,7 +2,7 @@ PROJECT_ID:=devops-directive-project
 DOMAIN:=style-transfer.devopsdirective.com
 
 generate-images:
-	# poetry run python yt_get_subscriber_data.py
+	poetry run python yt_get_subscriber_data.py
 	poetry run python generate_images.py
 	poetry run python reshape_subscriber_data.py
 	cp ./subscriber_data_array.json ./subscriber-gallery/src/subscriber_data_array.json

@@ -1,6 +1,5 @@
 import json
 import os
-import tensorflow as tf
 
 from constants import STYLE_IMAGES
 from style_transfer import plain_image, stylize_image

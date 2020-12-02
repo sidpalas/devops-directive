@@ -158,7 +158,7 @@ export default function Album() {
               (Many channels don't have their subscriptions public. If you want
               me to add your channel, just comment{' '}
               <Link
-                href="https://www.youtube.com/post/UgyULzTX7e3EhMfS1NF4AaABCQ"
+                href="https://youtu.be/XGcKdsgMrIY"
                 target="_blank"
               >
                 HERE
