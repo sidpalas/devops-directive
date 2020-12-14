@@ -14,7 +14,13 @@ mpl.rcParams['axes.grid'] = False
 # Load compressed models from tensorflow_hub
 os.environ['TFHUB_MODEL_LOAD_FORMAT'] = 'COMPRESSED'
 
-hub_model = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
+
+# hub_model = hub.load('https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2')
+
+# Use local version of model file (remote version not working for some reason...)
+print('make sure to initialize local webserver!')
+hub_model = hub.load('http://localhost:8000/magenta_arbitrary-image-stylization-v1-256_2.tar.gz')
+
 
 def tensor_to_image(tensor):
   tensor = tensor*255
@@ -26,7 +32,7 @@ def tensor_to_image(tensor):
 
 
 def load_img(path_to_img):
-  max_dim = 512
+  max_dim = 512 # 1280
   img = tf.io.read_file(path_to_img)
   img = tf.image.decode_image(img, channels=3)
   img = tf.image.convert_image_dtype(img, tf.float32)

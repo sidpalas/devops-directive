@@ -1,10 +1,15 @@
 import json 
 
-from yt_channels import get_channel_title_and_thumbnail_url
+# from yt_channels import get_channel_title_and_thumbnail_url
 from yt_studio import get_subscriber_channel_ids
 
 def main(use_cache = True):
-    channel_ids = get_subscriber_channel_ids()
+    if use_cache:
+        with open("channel_ids.json") as f:
+            channel_ids = json.load(f)        
+    else:
+        channel_ids = get_subscriber_channel_ids()
+
 
     # Add custom list
     with open("channel_ids_manual.json") as f:
