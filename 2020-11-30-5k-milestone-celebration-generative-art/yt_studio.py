@@ -16,7 +16,7 @@ def get_subscribers(auth_hash, cookie_string, page_token):
 
     params = (
         ("alt", "json"),
-        ("key", "AIzaSyBUPetSUmoZL-OhlxA7wSac5XinrygCqMo"),
+        ("key", "AIzaSyBUPetSUmoZL-OhlxA7wSac5XinrygCqMo")
     )
 
     data = (
