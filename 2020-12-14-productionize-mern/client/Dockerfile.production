@@ -1,0 +1,28 @@
+### First Stage ###
+FROM node:14-slim AS builder
+
+WORKDIR /usr/src/app
+
+COPY ./package.json ./
+COPY ./yarn.lock ./
+
+RUN yarn install
+
+COPY . .
+
+ARG BASE_URL
+ENV REACT_APP_BASE_URL=${BASE_URL}
+
+RUN yarn build
+
+### Second Stage ###
+FROM caddy:2.1.1
+
+ARG CADDYFILE
+COPY ${CADDYFILE} /etc/caddy/Caddyfile
+
+COPY --from=builder /usr/src/app/build/ /srv
+
+EXPOSE 80
+
+EXPOSE 443

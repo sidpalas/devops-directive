@@ -1,0 +1,4 @@
+**/node_modules
+
+/server/config/*
+!/server/config/dev.env
