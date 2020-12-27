@@ -9,6 +9,7 @@ services:
       - mern-app
     volumes:
       - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
   api-server:
     image: api-server
     env_file: ./server/config/dev.env
@@ -18,10 +19,11 @@ services:
       - mern-app
     volumes:
       - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
     depends_on:
       - mongo
   mongo:
-    image: mongo:3.6.19-xenial
+    image: mongo:4.4-bionic
     ports:
       - "27017:27017"
     networks:
