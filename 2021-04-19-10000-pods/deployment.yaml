@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asmttpd
+  namespace: all-the-pods
+spec:
+  replicas: 10001
+  selector:
+    matchLabels:
+      app: asmttpd
+  template:
+    metadata:
+      labels:
+        app: asmttpd
+    spec:
+      containers:
+      - image: sidpalas/asmttpd:0.0.1
+        imagePullPolicy: IfNotPresent
+        name: asmttpd
+        resources:
+          limits:
+            cpu: 3m
+            memory: 15Mi
+          requests:
+            cpu: 2m
+            memory: 10Mi
+ 
