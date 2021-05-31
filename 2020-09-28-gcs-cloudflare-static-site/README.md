@@ -1,3 +1,9 @@
+# Using Google Cloud Storage + Cloudflare to Host a Static Website for just PENNIES PER MONTH!
+
+Video: https://youtu.be/sUr4GBzEqNs
+
+---
+
 Setup Steps:
 
 1. Purchase domain

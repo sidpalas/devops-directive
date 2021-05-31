@@ -1,5 +1,7 @@
 # Using docker-compose on Google's Container Optimized OS (COS)
 
+Video: https://youtu.be/GoOB8YoRSbA
+
 ## Resources
 
 https://cloud.google.com/community/tutorials/docker-compose-on-container-optimized-os

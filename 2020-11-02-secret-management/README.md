@@ -1,3 +1,7 @@
+# How to Properly Manage Application Secrets (5 LEVELS)
+
+Video: https://youtu.be/7NTFZoDpzbQ
+
 ## Level -2 (uᴉɐɹq) - no authentication
 
 ## Level -1 (anti-brain) - make all your passwords "password" (or "maga2020!")
