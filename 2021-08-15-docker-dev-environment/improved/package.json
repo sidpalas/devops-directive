@@ -1,0 +1,9 @@
+{
+  "name": "2021-08-16-improved",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

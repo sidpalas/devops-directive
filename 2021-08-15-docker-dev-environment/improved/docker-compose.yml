@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  express:
+    build:
+      context: ./
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DEBUG=express:*
+    command:
+      - nodemon
+      - --inspect=0.0.0.0:9229
+      - server.js
+  # databaseservice
+  # ...
+  # front-end service
+  # ...
