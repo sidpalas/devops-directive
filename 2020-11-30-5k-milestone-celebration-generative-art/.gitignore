@@ -3,3 +3,8 @@ photos/
 .DS_Store
 *.pyc
 magenta_arbitrary-image-stylization-v1-256_2.tar.gz
+
+internal-api-curl
+
+subscriber_data_array.json
+subscriber_data.json
