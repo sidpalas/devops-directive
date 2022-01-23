@@ -5,9 +5,10 @@ on:
     branches: [ test-lint ]
 
 jobs:
-  hello:
+  lint-code:
     runs-on: ubuntu-20.04
     steps:
+    - uses: actions/checkout@v2
     - name: Install Dependencies
       run: pip install -r requirements.txt
     - name: Lint Code
