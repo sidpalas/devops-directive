@@ -10,10 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Dependencies
-      run: pip install -r requirements.txt
+      run: pip install -r $GITHUB_WORKSPACE/requirements.txt
     - name: Lint Code
       run: |
-        ls
-        cd 2022-01-23-git-hooks
+        cd $GITHUB_WORKSPACE/2022-01-23-git-hooks
         make check-format
         make lint
