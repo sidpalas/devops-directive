@@ -7,12 +7,14 @@ on:
 jobs:
   lint-code:
     runs-on: ubuntu-20.04
+    env:
+      GIT_HOOKS_DIR: $GITHUB_WORKSPACE/2022-01-23-git-hooks
     steps:
     - uses: actions/checkout@v2
     - name: Install Dependencies
-      run: pip install -r $GITHUB_WORKSPACE/requirements.txt
+      run: pip install -r $GIT_HOOKS_DIR/requirements.txt
     - name: Lint Code
       run: |
-        cd $GITHUB_WORKSPACE/2022-01-23-git-hooks
+        cd $GIT_HOOKS_DIR
         make check-format
         make lint
